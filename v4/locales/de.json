@@ -1,0 +1,330 @@
+{
+  "flag": "🇩🇪",
+  "name": "Deutsch",
+  "description": "Deutsch aus Deutschland",
+  "events": {
+    "guildCreate": {
+      "embed_author": "Danke, dass Sie mich zum Server %s hinzugefügt haben!!",
+      "embed_description": "Danke, dass du mich dem server %s hinzugefügt hast! Wenn du Hilfe bei der Konfiguration des Bots benötigst oder Fragen hast, hier sind ein paar Schaltflächen mit nützlichen Informationen.\n\nIch habe festgestellt, dass dein Server in der Region %s liegt, deshalb habe ich automatisch die Sprache %s aktiviert. Keine Sorge, du kannst es jederzeit mit dem Befehl `/config` ändern",
+      "buttons": {
+        "web": "Meine Website",
+        "support": "Mein Support-Server",
+        "add": "Mehr Bots"
+      }
+    },
+    "dm": {
+      "embed_title": "Hallo :wave: Ich bin %s",
+      "embed_description": "Ich bin der Musikbot, den dein Server braucht!\nWenn Sie etwas mehr **Informationen über mich** wünschen, können Sie auf die **Knöpfe!** klicken"
+    },
+    "trackStart": {
+      "embed_author": "| Jetzt spielen"
+    },
+    "interactionCreate": {
+      "unknown_command": " Ich konnte den von Ihnen eingegebenen Befehl nicht finden",
+      "cant_use_button": " Sie können diese Schaltfläche nicht verwenden",
+      "unknown": "Unbekannte Interaktion"
+    }
+  },
+  "commands": {
+    "play": {
+      "no_vc": "Ich kann keine Musik spielen, wenn ich nicht auf einem Sprachkanal bin!",
+      "vc_required": "Du musst in einem Sprachkanal sein, um diesen Befehl auszuführen!",
+      "no_vc_perms": "Ich habe keine Erlaubnis, auf diesem Kanal Musik zu spielen!",
+      "different_vc": "Ich spiele bereits Musik auf einem anderen Kanal!",
+      "no_player": "Ich habe keinen Spieler zur Verfügung!",
+      "no_song": "Sie müssen ein Lied angeben!",
+      "no_song_found": "Ich habe kein Lied mit diesem Namen gefunden!",
+      "youtube_link": "Ich kann keine Lieder von YouTube abspielen!",
+      "vc_disabled": "Ein Administrator hat diesen Sprachkanal deaktiviert!",
+      "song": "Lied",
+      "songs": "Lieder",
+      "duration": "Dauer",
+      "in_queue": "In der Warteschlange",
+      "pause_resume": "Pause/Fortsetzen",
+      "stop": "Stopp",
+      "no_activity": "Es war nicht möglich, eine Einladung für die Aktivität zu erstellen."
+    },
+    "queue": {
+      "embed_footer": "Seite %s von %s (%s Songs insgesamt)",
+      "embed_author": "Wiedergabeliste",
+      "now_playing": "Jetzt klingelt es",
+      "no_previous": "Keine früheren Lieder",
+      "no_next": "Es gibt keine leider mehr"
+    },
+    "pause": {
+      "already_paused": "Das Lied ist bereits pausiert!",
+      "paused": "Das Lied hat eine **Pause** eingelegt!",
+      "resumed": "Das Lied war **wieder aufgenommen**!",
+      "already_resumed": "Das Lied wird nicht pausiert!"
+    },
+    "artist": {
+      "no_artist": "Ich habe keinen Künstler mit diesem Namen gefunden!",
+      "no_bio": "Keine Informationen über diesen Künstler verfügbar",
+      "genres": "Genres",
+      "followers": "Follower",
+      "popularity": "Popularität",
+      "open_spotify": "In Spotify öffnen",
+      "play_top_tracks": "Die beliebtesten Lieder",
+      "embed_title": "Künstlerinformationen"
+    },
+    "block": {
+      "no_link": "Sie müssen einen zu blockierenden Link angeben!",
+      "invalid_link": "Der von Ihnen angegebene Link ist nicht gültig!",
+      "already_blocked": "Der von Ihnen angegebene Link ist bereits gesperrt!",
+      "not_blocked": "Der von Ihnen angegebene Link ist nicht blockiert!",
+      "block": "Der Link wurde **gesperrt**! Sie haben derzeit %s blockierte Links.\n\n`Sie können alle blockierten Links unter https://kenabot.xyz/blocked/%s`",
+      "unblock": "Der Link wurde **entsperrt**! Sie haben derzeit %s blockierte Links.\n\n`Sie können alle blockierten Links unter https://kenabot.xyz/blocked/%s`"
+    },
+    "stop": "Die Wiedergabeliste wurde **geleert**!",
+    "stop_leave": "Die Wiedergabeliste hat sich **leer** und ich habe den Sprachkanal verlassen!",
+    "skip": "Das Lied wurde **übersprungen**!",
+    "skip_vote": {
+      "no_active_vote": "Es gibt keine aktive Abstimmung, um das Lied zu überspringen!",
+      "already_active": "Es gibt bereits eine aktive Abstimmung, um das Lied zu überspringen!",
+      "vote": "**Starten Sie die Abstimmung, um das Lied zu überspringen!\nKlicken Sie auf die Schaltfläche, um abzustimmen. Damit das Lied übersprungen wird, müssen mehr als 50 % der Nutzer abstimmen.\n Aktueller Prozentsatz: %s.",
+      "label": "Abstimmen für den Sprung",
+      "announce": "**Ich habe eine Nachricht an alle Voice-Channel-Benutzer verschickt, damit sie für das Überspringen des Liedes stimmen!\nVergessen Sie nicht, auf die Schaltfläche zu klicken, um abzustimmen.",
+      "already_voted": "Sie haben bereits dafür gestimmt, den Song zu überspringen!",
+      "cant_vote": "Sie können nicht abstimmen, um das Lied zu überspringen!",
+      "voted": "Sie haben dafür gestimmt, den Song zu überspringen!",
+      "canceled": "**Abstimmung zum Sprung abgebrochen**\nEs scheint, dass nicht genügend Benutzer dafür gestimmt haben, den Song zu überspringen.",
+      "completed": "**Song überspringen!**\n`%s` der Benutzer haben entschieden, den Song zu überspringen.",
+      "redirect": "**Nur der GM kann diesen Befehl ausführen!**\nWenn Sie eine Abstimmung starten möchten, um den Song zu überspringen, können Sie den Befehl `/skip` ausführen."
+    },
+    "volume": {
+      "info": "Aktuelles Volumen: **%s**",
+      "invalid_level": "Sie müssen einen Lautstärkepegel zwischen **0** und **100** angeben!",
+      "set": "Die Lautstärke wurde geändert in **%s**!"
+    },
+    "loop": {
+      "info": "Die Schleife ist **%s**",
+      "already": "Die Schleife ist bereits **%s**!",
+      "action": "Die Schleife ist gewesen **%s**!",
+      "repeat_track": "aktiviert (song)",
+      "repeat_queue": "aktiviert (playlist)",
+      "no_repeat": "deaktiviert"
+    },
+    "now_playing": {
+      "remaining": "bleibe "
+    },
+    "premium": {
+      "no_code": "Sie haben keinen Prämiencode angegeben!",
+      "invalid_code": "Der von Ihnen eingegebene Code ist ungültig!",
+      "used_code": "Der von Ihnen angegebene Code ist bereits verwendet worden!",
+      "bot_claimed": "Dieser Code wurde bereits in diesem Bot verwendet!",
+      "already_premium": "Sie sind bereits im Spendermodus!",
+      "enabled": "Der Spendermodus wurde während **%s** aktiviert"
+    },
+    "invite": "Sie können mich auf Ihren Server einladen, indem Sie auf die Schaltfläche klicken!",
+    "support": "Sie können meinen Support-Server für Hilfe und weitere Informationen besuchen, indem Sie auf die Schaltfläche klicken!",
+    "shuffle": "Die Playlist wurde **gemischt**!",
+    "dashboard": "Sie können mein Web-Dashboard besuchen, um mich einzurichten, indem Sie auf die Schaltfläche klicken!",
+    "remove": {
+      "invalid": "Es gibt kein Lied in der **%s** Position!",
+      "success": "Der Song `%s` wurde **entfernt**!"
+    },
+    "skip_to": "Sie haben **%s** Songs vorwärts bewegt!",
+    "clear_queue": "Die Wiedergabeliste wurde **geleert**!",
+    "seek": {
+      "max_duration": "Ich kann nicht zu einer Position springen, die länger als die Dauer des Liedes ist!",
+      "not_seekable": "Dieses Lied kann nicht übersprungen werden!",
+      "invalid_time": "Sie müssen eine gültige Zeit angeben!",
+      "forward_success": "Der Song wurde **weitergeleitet** zu `%s`!",
+      "backward_success": "Der Song wurde **verzögert** zu `%s`!"
+    },
+    "back": {
+      "no_previous": "Es gibt kein vorheriges Lied!",
+      "success": "Zurück zum vorherigen Lied!"
+    },
+    "filters": {
+      "no_filters": "Sie müssen mindestens einen Filter angeben!",
+      "unknown": "Dieser Filter wird nicht erkannt!",
+      "enabled": "Der %s-Filter wurde **aktiviert**!",
+      "disabled": "Der %s-Filter wurde **deaktiviert**!",
+      "clear": "Die Filter wurden **deaktiviert**!",
+      "already_enabled": "Dieser Filter ist bereits **aktiviert**!",
+      "already_disabled": "Dieser Filter ist nicht **aktiviert**!",
+      "enabled_filters": "Filter aktiviert: `%s`"
+    },
+    "_247": {
+      "no_channel": "Sie müssen einen **Stimmkanal** angeben, um den **24/7** Modus zu aktivieren!",
+      "enabled": "Der **24/7**-Modus wurde für den Kanal **aktiviert** %s!",
+      "disabled": "Der modus **24/7** wurde **deaktiviert**!"
+    },
+    "help": {
+      "desc": "**Hallo :wave:**, ich bin **%s**!\nIch bin der Musikbot, den dein Server braucht! Ich kann Songs von **Spotify**, **Soundcloud**, **Twitch** und [mehr](https://kenabot.xyz) abspielen!\n\n**Befehle**\nSie können Informationen über alle meine Befehle **[hier](https://kenabot.xyz/commands)** oder durch Klicken auf die Schaltfläche unten sehen!\n\n**Prämien/Spenden**\nMit der **[KenaBot for Donors](https://kenabot.xyz/premium)** Version erhältst du Zugang zu neuen Funktionen und Erweiterungen des Bots, wie **24/7**, **Audioeffekte** und einen **Webplayer**!!.\n[Klicken Sie hier, um mehr zu erfahren](https://kenabot.xyz/premium)\n\n**Fügen Sie mich zu Ihrem Server hinzu**\nIhr könnt mich zu so vielen Servern hinzufügen, wie ihr wollt, indem ihr **[hier](https://discord.com/api/oauth2/authorize?client_id=%s&permissions=3534272&scope=bot%20applications.commands)** oder den Button anklickt!\n\n**Support-Server**\nAuf meinem Support-Server findest du jede Art von Hilfe und mehr Informationen über mich, du kannst beitreten, indem du **[hier](https://kenabot.xyz/support)** oder auf den Button klickst!",
+      "commands": {
+        "title": "Befehle"
+      },
+      "add": {
+        "title": "Fügen Sie mich zu Ihrem Server hinzu",
+        "add": "Fügen Sie mich hinzu!"
+      },
+      "support": {
+        "title": "Server unterstützen",
+        "support": "Unterstützung"
+      }
+    },
+    "commands": "Sie können Informationen über alle meine Befehle **[hier](https://kenabot.xyz/commands)** oder durch Klicken auf die Schaltfläche unten sehen!",
+    "lyrics": {
+      "loading": "Ich suche das Lied...\n`Wenn ich keine Nachricht mit dem Text geschickt habe, ist es möglich, dass ich den Song nicht gefunden habe.`",
+      "error": "Es wurde kein Lied mit diesem Namen gefunden!"
+    },
+    "together": {
+      "embed_title": "Hier ist deine Einladung für %s",
+      "embed_description": "Um auf die Aktivität zuzugreifen, kannst du [hier](%s) klicken oder auf die Schaltfläche!",
+      "button": "Gehen Sie zur Aktivität",
+      "no_permission": "Ich habe keine Berechtigungen, um Einladungen in diesem Kanal zu erstellen!",
+      "choose_embed_title": "Wählen Sie eine Discord Together-Aktivität!",
+      "choose_embed_description": "Klicken Sie auf das Menü, um die gewünschte Aktivität auszuwählen!",
+      "choose_embed_placeholder": "Wählen Sie eine Aktivität"
+    },
+    "session": {
+      "cant_modify_session": "Sie können die Wiedergabewarteschlange nicht ändern, während Sie sich in einer Sitzung befinden!",
+      "session_leave": "Ich habe die Sitzung verlassen %s",
+      "session_end": "Die %s Sitzung ist beendet!",
+      "already_active": "Es gibt bereits eine aktive Sitzung auf diesem Server!\nFalls Sie sich nicht erinnern, Ihr Sitzungscode ist `%s`",
+      "cant_create_already_listener": "Sie können keine Sitzung erstellen, während Sie einen Titel in einer anderen Sitzung anhören!\nUm die Sitzung zu verlassen, verwenden Sie `/session leave`",
+      "cant_create_nothing_playing": "Um eine Session zu erstellen, müssen Sie zunächst einen Song spielen!",
+      "embed_author": "Kena Together Sitzung",
+      "embed_title": "Sie haben eine Sitzung erstellt!",
+      "embed_description": "Sie haben eine Kena Together Sitzung erstellt! Senden Sie den Einladungscode an Ihre Freunde, damit sie an Ihrer Sitzung teilnehmen können!\n```%s```\nWenn innerhalb von 15 Minuten niemand an Ihrer Sitzung teilnimmt, wird Ihre Sitzung automatisch geschlossen.",
+      "unknown_code": "Keine Sitzung mit diesem Code gefunden!",
+      "join_self": "Sie können nicht an Ihrer eigenen Sitzung teilnehmen!",
+      "already_in_session": "Sie befinden sich bereits in einer Sitzung!",
+      "not_hosting": "Sie sind nicht Gastgeber einer Sitzung!",
+      "cant_join_nothing_playing": "Die Sitzung, an der Sie teilnehmen möchten, wird nicht gespielt!",
+      "other_bot": "Die Sitzung, der Sie beitreten wollen, wird von diesem Bot nicht gespielt!\nWir arbeiten immer noch daran, dass du an Sitzungen anderer Bots teilnehmen kannst!",
+      "join": "Sie sind der Sitzung beigetreten %s",
+      "cant_leave_self": "Sie versuchen, sich von Ihrer eigenen Sitzung abzumelden!\nWenn Sie sie löschen wollen, verwenden Sie `/session delete`",
+      "cant_leave_not_in_session": "Sie sind in keiner Sitzung!",
+      "leave": "Sie haben die Sitzung verlassen %s",
+      "delete": "Sie haben die Sitzung `%s` gelöscht und **%s** Zuhörer rausgeschmissen",
+      "code": "Ihr Sitzungscode lautet ```%s```",
+      "listeners": "Hörer",
+      "created_at": "Erstellt"
+    },
+    "status": {
+      "embed_title": "Zustand der %s",
+      "embed_description": "Dieser Server befindet sich auf dem `%s` Shard\nFür weitere Informationen über die Scherben, klicken Sie [hier](https://kenabot.xyz/status)"
+    },
+    "config": {
+      "title": "Server-Konfiguration",
+      "description": "**Hallo** :wave: willkommen beim <@!%s> Bot-Einrichtungsassistenten\n\nWenn Sie Fragen zum Bot und seiner Konfiguration haben, können Sie meinen **[Support-Server](Https://kenabot.xyz/soporte)** aufrufen oder meine **[Webseite](https://kenabot.xyz)**",
+      "help": "Wenn Sie Hilfe benötigen, können Sie auf meiner **[Webseite](https://kenabot.xyz)** oder auf **[Support-Server](https://kenabot.xyz/support)** nachsehen.",
+      "buttons": {
+        "lang": "Sprache",
+        "channels": "gesperrte Kanäle",
+        "dj": "DJ-Rolle",
+        "more": "Mehr",
+        "commands": "Blockierte Befehle",
+        "premium_on": "Spendermodus aktiviert",
+        "premium_off": "Spendermodus deaktiviert",
+        "back": "Zurück",
+        "voice_channels": "Gesperrte Sprachkanäle",
+        "beta_on": "Sie sind im Beta-Stadium",
+        "beta_off": "Sie sind nicht in der Beta-Phase",
+        "silent_on": "Stumme Befehle aktiviert",
+        "silent_off": "Stumme Befehle deaktiviert",
+        "explicit_on": "Explizite Filter ein",
+        "explicit_off": "Explizite Filter aus",
+        "duration_limit": "Dauerbegrenzung",
+        "per_user_songs": "Lieder pro Benutzer",
+        "extra": "Fortschrittlich",
+        "embed": "Farbe einbetten",
+        "database": "Informationen, die wir besitzen",
+        "select_all": "Wählen Sie Alle",
+        "remove_all": "alles entfernen"
+      },
+      "lang": {
+        "title": "Auswahl der Sprache",
+        "description": "Öffnen Sie das Menü, um die Sprache auszuwählen, in der die Bot-Meldungen angezeigt werden sollen.\n\nWenn Sie Ihre Sprache nicht sehen, können Sie meinem [Support-Server] (https://kenabot.xyz/soporte) beitreten und als Übersetzer beitragen!",
+        "select": "Sprache auswählen"
+      },
+      "channels": {
+        "title": "Blockierte Kanäle",
+        "description": "Öffnen Sie das Menü, um die Kanäle auszuwählen, auf denen ich keine Nachrichten beantworten werde.",
+        "select": "Kanäle auswählen"
+      },
+      "embed": {
+        "title": "Einstellen der Farbe der Einbettungen",
+        "description": "Öffnen Sie das Menü, um die Farbe der Einbettung zu wählen, die in allen Bot-Nachrichten angezeigt werden soll.\n\nDieses Menü wird nur mit Standardfarben geliefert, wenn Sie eine benutzerdefinierte Farbe verwenden möchten, können Sie zu meinem [Dashboard Web] (https://kenabot.xyz/dashboard) gehen.",
+        "select": "Farbe einbetten"
+      },
+      "premium_on": {
+        "title": "Sie haben bereits den Spender Modus aktiviert",
+        "description_forever": "**Vielen Dank, dass Sie zur Entwicklung von KenaBot beigetragen haben!!!!**\n\nUnd wir haben gute Nachrichten... Ihr Spendermodus ist **permanent** aktiviert!",
+        "description": "**Vielen Dank für Ihren Beitrag zur Entwicklung von KenaBot!!!!**\nWenn Ihr Spendermodus endet <t:%s:R>, genießen Sie all die Dinge, die dieser Modus bringt!"
+      },
+      "premium_off": {
+        "title": "Es sieht so aus, als hätten Sie den Spender Modus nicht aktiviert",
+        "description": "Wenn Sie für meine Entwicklung spenden möchten, können Sie dies von meiner [Website](https://kenabot.xyz/premium) aus tun.\nSie erhalten den Spendermodus und können all die Dinge genießen, die dieser Modus mit sich bringt!"
+      },
+      "duration_limit": {
+        "title": "Liedlänge",
+        "big_title": "Legen Sie eine maximale Songlänge fest",
+        "placeholder": "Beispiel: 1m30s, 5m, 3m5s... aktuelle Dauer: %s",
+        "no_duration": "Keine Dauer eingegeben",
+        "max_duration": "Die maximale Dauer eines Songs beträgt 10 Minuten",
+        "success": "Maximale Dauer richtig eingestellt `%s`"
+      },
+      "database": {
+        "title": "Dies sind alle Informationen, die wir über Ihren Server gespeichert haben:",
+        "raw": "ungekocht:",
+        "read": "Lesbar:",
+        "delete": "Löschen von Informationen auf dem Server",
+        "privacy": "Datenschutzbestimmungen",
+        "confirm": "Löschen",
+        "cancel": "Abbrechen"
+      },
+      "commands": {
+        "title": "Blockierte Befehle",
+        "description": "Öffnen Sie das Menü, um auszuwählen, auf welche Befehle ich nicht reagieren soll.\nWenn ein Benutzer ohne Berechtigungen versucht, einen Befehl auszuführen, der blockiert ist, werde ich mit einer Fehlermeldung antworten.",
+        "select": "Wählen Sie die Befehle"
+      },
+      "voice": {
+        "title": "Gesperrte Sprachkanäle",
+        "description": "Öffnen Sie das Menü, um die Sprachkanäle auszuwählen, denen ich nicht beitreten kann.",
+        "select": "Kanäle auswählen"
+      },
+      "djrole": {
+        "title": "Die Rolle des DJ",
+        "description": "Öffnen Sie das Menü, um die Rolle des DJs zu wählen, der alle Musikbefehle ohne Einschränkungen ausführen kann.",
+        "select": "wählen Sie die Rolle aus"
+      },
+      "cant_use": "**Sie können diese Interaktion nicht nutzen!\nSie können den Befehl selbst ausführen, um ihn zu verwenden."
+    }
+  },
+  "manager": {
+    "no_perms": "Sie haben keine ausreichenden Berechtigungen, um diese Aktion durchzuführen!",
+    "song_added": "Lied **[%s](%s)** in die Warteschlange aufgenommen! `%s`",
+    "tts_added": "Text-to-Speech in die Warteschlange aufgenommen!",
+    "playlist_added": "**%s** Lieder in die Warteschlange aufgenommen!",
+    "nothing_playing": "Es wird nichts reproduziert!",
+    "cant_modify_queue": "Sie können die Wiedergabewarteschlange nicht ändern!",
+    "queue_end": "Die Wiedergabewarteschlange ist **beendet**!",
+    "explicit_song": "Dieser Server hat anstößige Songs blockiert, daher kann dieser Song nicht abgespielt werden.",
+    "max_queue_size": "Playlists ohne deaktivierten Spendermodus können nicht mehr als **%s** Songs enthalten!",
+    "restart": {
+      "embed_author": "KenaBot wird neu starten!",
+      "embed_description": "Wir bedauern diese Unterbrechung, aber **KenaBot** wird neu gebootet, um neue Funktionen zu implementieren\n**Wir sind gleich wieder da!**"
+    },
+    "cant_do": "Das kann ich hier nicht tun!",
+    "no_premium": "Nur **Spender** können diesen Befehl verwenden!\n[Klicken Sie hier, um mehr zu erfahren](https://kenabot.xyz/premium)",
+    "no_premium_twitch": "Nur **Spender** können **Twitch** streamen!\n[Klicken Sie hier, um mehr zu erfahren](https://kenabot.xyz/premium)",
+    "no_premium_stage": "Nur **Spender** können Musik auf **Bühnenkanälen** abspielen!\n[Klicken Sie hier, um mehr zu erfahren](https://kenabot.xyz/premium)",
+    "blocked": "**Dieser Kanal ist gesperrt!**\nEin Administrator dieses Servers hat diesen Channel gesperrt, um die Verwendung von Befehlen hier zu verhindern. ",
+    "blocked_command": "**Dieser Befehl ist blockiert!**\nEin Administrator dieses Servers hat diesen Befehl gesperrt, um seine globale Verwendung zu verhindern.",
+    "no_db": "**Keine Angaben!**\nWir scheinen in unseren Datenbanken keine Informationen über Ihren Server gespeichert zu haben.",
+    "delete_confirm": "**Sind Sie sicher, dass Sie diese Informationen löschen möchten?**\nDie gesamte Serverkonfiguration geht dabei verloren.",
+    "delete_cancel": "**Abgebrochen!**\nDie Aktion zum Löschen der Informationen wurde abgebrochen.",
+    "deleted": "**Gelöscht!**\nDie Serverinformationen wurden gelöscht.",
+    "dj_role_required": "**Nur der GM kann diesen Befehl ausführen!**\nEs scheint, dass es in einem Sprachkanal einen DJ gibt, nur er kann diesen Befehl ausführen.",
+    "dj_role_required_usecmd": "**Nur der DJ kann diesen Befehl ausführen!**\nEs scheint, dass es in einem Sprachkanal einen DJ gibt, nur er kann diesen Befehl ausführen.\n\nMit dem Befehl `/skip` können Sie eine Abstimmung zum Überspringen des Liedes starten.",
+    "is247": "Sie können diesen Befehl nicht im **24/7** Modus verwenden!",
+    "premium_forever": "Es scheint, dass dieser Server in unserem **Partner**-Programm ist, so dass Sie seine Konfiguration nicht löschen können.",
+    "blocked_server": "Dieser Server ist vom Entwickler gesperrt!\nGrund: `%s`.",
+    "max_duration": "Die Länge dieses Liedes überschreitet die maximale Länge dieses Servers!",
+    "blocked_song": "Dieses Lied ist auf diesem Server gesperrt!"
+  }
+}

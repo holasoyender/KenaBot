@@ -1,0 +1,126 @@
+/*
+ * File:          DotenvParser.java
+ * Path:          v3\src\main\java\config\internal\DotenvParser.java
+ * ============================================================
+ *
+ * Copyright (c) 2026 holasoyender
+ * All rights reserved.
+ *
+ * Last modified: 2023-03-24 23:10:19 +01:00
+ *
+ * SHA-256: 6b0e738c2f0326ad5fa14d0671324d3ce9004411a1d0dfb875cb795bbd94fcf3
+ *
+ */
+
+
+package config.internal;
+
+import config.DotenvEntry;
+import config.DotenvException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static java.util.Collections.emptyList;
+
+/**
+ * (Internal) Parses .env file
+ */
+public class DotenvParser {
+
+    private static final Pattern WHITE_SPACE_REGEX = Pattern.compile("^\\s*$"); // ^\s*${'$'}
+
+    // The follow regex matches key values.
+    // It supports quoted values surrounded by single or double quotes
+    // -  Single quotes: ['][^']*[']
+    //    The above regex snippet matches a value wrapped in single quotes.
+    //    The regex snippet does not match internal single quotes. This is present to allow the trailing comment to include single quotes
+    // -  Double quotes: same logic as single quotes
+    // It ignore trailing comments
+    // - Trailing comment: \s*(#.*)?$
+    //   The above snippet ignore spaces, the captures the # and the trailing comment
+    private static final Pattern DOTENV_ENTRY_REGEX = Pattern.compile("^\\s*([\\w.\\-]+)\\s*(=)\\s*('[^']*'|\"[^\"]*\"|[^#]*)?\\s*(#.*)?$"); //"^\\s*([\\w.\\-]+)\\s*(=)\\s*([^#]*)?\\s*(#.*)?$"); // ^\s*([\w.\-]+)\s*(=)\s*([^#]*)?\s*(#.*)?$
+
+    private final DotenvReader reader;
+    private final boolean throwIfMissing;
+    private final boolean throwIfMalformed;
+
+    private final Predicate<String> isWhiteSpace = DotenvParser::matches;
+    private final Predicate<String> isComment = s -> s.startsWith("#") || s.startsWith("////");
+    private final Predicate<String> isQuoted = s -> s.startsWith("\"") && s.endsWith("\"");
+    private final Function<String, DotenvEntry> parseLine = DotenvParser::matchEntry;
+
+    /**
+     * Creates a dotenv parser
+     * @param reader the dotenv reader
+     * @param throwIfMissing if true, throws when the .env file is missing
+     * @param throwIfMalformed if true, throws when the .env file is malformed
+     */
+    public DotenvParser(DotenvReader reader, boolean throwIfMissing, boolean throwIfMalformed) {
+        this.reader = reader;
+        this.throwIfMissing = throwIfMissing;
+        this.throwIfMalformed = throwIfMalformed;
+    }
+
+    /**
+     * (Internal) parse the .env file
+     * @return a list of DotenvEntries
+     * @throws DotenvException if an error is encountered during the parse
+     */
+    public List<DotenvEntry> parse() throws DotenvException {
+        List<DotenvEntry> entries = new ArrayList<>();
+        for (String line : lines()) {
+            String l = line.trim();
+            if (isWhiteSpace.test(l) || isComment.test(l) || isBlank(l)) continue;
+
+            DotenvEntry entry = parseLine.apply(l);
+            if (entry == null) {
+                if (throwIfMalformed) throw new DotenvException("Malformed entry " + l);
+                continue;
+            }
+            String key = entry.key();
+            String value = normalizeValue(entry.value());
+            entries.add(new DotenvEntry(key, value));
+        }
+        return entries;
+    }
+
+    private List<String> lines() throws DotenvException {
+        try {
+            return reader.read();
+        } catch (DotenvException e) {
+            if (throwIfMissing) throw e;
+            return emptyList();
+        } catch (IOException e) {
+            throw new DotenvException(e);
+        }
+    }
+
+    private String normalizeValue(String value) {
+        String tr = value.trim();
+        return isQuoted.test(tr)
+                ? tr.substring(1, value.length() - 1)
+                : tr;
+    }
+
+    private static boolean matches(String text) {
+        Matcher matcher = DotenvParser.WHITE_SPACE_REGEX.matcher(text);
+        return matcher.matches();
+    }
+
+    private static DotenvEntry matchEntry(String text) {
+        Matcher matcher = DotenvParser.DOTENV_ENTRY_REGEX.matcher(text);
+        boolean result = matcher.matches();
+        if (!result || matcher.groupCount() < 3) return null;
+        return new DotenvEntry(matcher.group(1), matcher.group(3));
+    }
+
+    private static boolean isBlank(String s) {
+        return s == null || s.trim().isEmpty();
+    }
+}

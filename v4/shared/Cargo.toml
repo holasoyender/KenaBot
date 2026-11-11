@@ -1,0 +1,22 @@
+[package]
+name = "shared"
+version = "4.0.0-alpha1"
+edition = "2021"
+authors = ["holasoyender", "MicroondasV2"]
+keywords = ["discord", "kena", "bot", "music", "spotifyy"]
+description = "Módulos compartidos para Kena"
+repository = "https://github.com/holasoyender/Kena"
+license = "Apache-2.0"
+
+[dependencies]
+clap = { version = "4.3.11", optional = true }
+unreachable = {  version = "1.0.0" }
+skua = {  version = "0.12.1" }
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = {  version = "1.0.108" }
+redis = { version = "0.25.0", features = ["tokio-comp", "ahash", "connection-manager", "keep-alive"] }
+tokio = { version = "1.35.0", features = ["macros", "rt-multi-thread", "time", "signal"] }
+
+[dev-dependencies]
+tempfile = "3.3.0"
+once_cell = "1.16.0"

@@ -1,0 +1,17 @@
+{
+  "owner_ids":  [
+    "396683727868264449",
+    "581527728034152449",
+    "397453373479190538"
+  ],
+  "translators": [],
+  "prefix": "!",
+  "support_invite": "https://discord.gg/kenabot-910907192989843548",
+  "website": "https://kenabot.xyz",
+  "invite": "https://kenabot.xyz#bots",
+  "max_playlist_size": 1000,
+  "disabled_commands": [],
+  "default_volume": 50,
+  "maintenance": false,
+  "default_language": "es-ES"
+}

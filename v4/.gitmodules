@@ -1,0 +1,9 @@
+[submodule "fmt"]
+	path = fmt
+	url = https://github.com/Kenabot/fmt
+[submodule "tokio"]
+	path = tokio
+	url = https://github.com/Kenabot/tokio
+[submodule "skua"]
+	path = skua
+	url = https://github.com/Kenabot/skua

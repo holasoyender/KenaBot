@@ -1,0 +1,27 @@
+name: core build
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "core/**/*"
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: "Gradle clean build"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set-up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '18'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Set gradle wrapper permissions
+        run: chmod +x gradlew
+      - name: Build Core project
+        run: ./gradlew build --scan -s -p core

@@ -1,0 +1,119 @@
+/*
+ * File:          TikTokAudioTrackHttpManager.java
+ * Path:          v3\src\main\java\player\tiktok\TikTokAudioTrackHttpManager.java
+ * ============================================================
+ *
+ * Copyright (c) 2026 holasoyender
+ * All rights reserved.
+ *
+ * Last modified: 2022-08-29 12:59:00 +02:00
+ *
+ * SHA-256: c40be4fe948671c3e09ccf111ff6142db0ed72f210afc8a5459a818ea12b5d74
+ *
+ */
+
+
+package player.tiktok;
+
+import com.sedmelluq.discord.lavaplayer.tools.http.HttpContextFilter;
+import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;
+import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface;
+import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterfaceManager;
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.cookie.CookieOrigin;
+import org.apache.http.cookie.CookieSpec;
+import org.apache.http.cookie.MalformedCookieException;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.cookie.BrowserCompatSpec;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static player.Utils.fakeChrome;
+
+public class TikTokAudioTrackHttpManager implements AutoCloseable {
+    private String cookie = null;
+
+    protected final HttpInterfaceManager httpInterfaceManager;
+    private final CookieSpec cookieSpec = new BrowserCompatSpec(); // DefaultCookieSpec does not parse
+    private final CookieStore cookieStore = new BasicCookieStore();
+
+    public TikTokAudioTrackHttpManager() {
+        httpInterfaceManager = HttpClientTools.createDefaultThreadLocalManager();
+
+        httpInterfaceManager.configureBuilder((builder) -> builder.setDefaultCookieStore(cookieStore));
+
+        httpInterfaceManager.setHttpContextFilter(new TikTokFilter());
+    }
+
+    public HttpInterface getHttpInterface() {
+        return httpInterfaceManager.getInterface();
+    }
+
+    protected void loadCookies() throws IOException, MalformedCookieException {
+        try (final HttpInterface httpInterface = httpInterfaceManager.getInterface()) {
+            final HttpGet httpGet = new HttpGet("https://www.tiktok.com/");
+
+            try (final CloseableHttpResponse response = httpInterface.execute(httpGet)) {
+                final CookieOrigin origin = new CookieOrigin(".tiktok.com", 443, "/", true);
+
+                final List<Cookie> cookies = new ArrayList<>();
+
+                for (final Header header : response.getHeaders("Set-Cookie")) {
+                    cookies.addAll(cookieSpec.parse(header, origin));
+                }
+
+                this.cookie = cookies.stream()
+                    .map((c) -> c.getName() + '=' + c.getValue())
+                    .collect(Collectors.joining("; "));
+            }
+        }
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.httpInterfaceManager.close();
+    }
+
+    private class TikTokFilter implements HttpContextFilter {
+        @Override
+        public void onContextOpen(HttpClientContext context) {
+            context.setCookieStore(cookieStore);
+        }
+
+        @Override
+        public void onContextClose(HttpClientContext context) {
+            // Not used
+        }
+
+        @Override
+        public void onRequest(HttpClientContext context, HttpUriRequest request, boolean isRepetition) {
+            fakeChrome(request);
+
+            if (cookie != null) {
+                request.setHeader("cookie", cookie);
+            }
+
+            request.setHeader("Referer", "https://www.tiktok.com/");
+        }
+
+        @Override
+        public boolean onRequestResponse(HttpClientContext context, HttpUriRequest request, HttpResponse response) {
+            return false;
+        }
+
+        @Override
+        public boolean onRequestException(HttpClientContext context, HttpUriRequest request, Throwable error) {
+            return false;
+        }
+    }
+}

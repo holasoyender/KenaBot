@@ -1,0 +1,330 @@
+{
+  "flag": "🇪🇸",
+  "name": "Català",
+  "description": "Català de Catalunya",
+  "events": {
+    "guildCreate": {
+      "embed_author": "Gràcies per afegir-me al teu servidor %s%!!",
+      "embed_description": "Gràcies per afegir-me al servidor **%s%**! Si necessites ajuda amb la configuració del bot o tens algun dubte aquí et deixo uns botons amb informació útil.\n\nHe detectat que el teu servidor és a la regió `%t%`, per la qual cosa he activat automàticament l'idioma %u%. Tranquil, pots canviar-ho en qualsevol moment amb el comandament `/config`",
+      "buttons": {
+        "web": "La meva pàgina web",
+        "support": "El meu servidor de suport",
+        "add": "Més bots"
+      }
+    },
+    "dm": {
+      "embed_title": "Hola :wave: soc %s%",
+      "embed_description": "Soc el bot de música que necessita el teu servidor!\nSi vols una mica més d'**informació** sobre mi**, pots accedir donat li als **botons**."
+    },
+    "trackStart": {
+      "embed_author": "Ara sonant"
+    },
+    "interactionCreate": {
+      "unknown_command": "No he pogut trobar l'ordre que has escrit",
+      "cant_use_button": "No pots utilitzar aquest botó",
+      "unknown": "Interacció desconeguda"
+    }
+  },
+  "commands": {
+    "play": {
+      "no_vc": "No puc reproduir música si no estic a un canal de veu. ",
+      "vc_required": "Has d'estar en un canal de veu per a executar aquest comandament!",
+      "no_vc_perms": "No tinc permisos per reproduir música en aquest canal!",
+      "different_vc": "Ja estic reproduint música en un altre canal!",
+      "no_player": "No tinc ningun reproductor disponible!",
+      "no_song": "Has d'especificar una cançó!",
+      "no_song_found": "No he trobat cap cançó amb aquest nom!",
+      "youtube_link": "No puc reproduir cançons de YouTube!",
+      "vc_disabled": "Un administrador ha deshabilitat aquest canal de veu!",
+      "song": "Cançó",
+      "songs": "Cançons",
+      "duration": "Duració",
+      "in_queue": "En cua",
+      "pause_resume": "Aturar/Resumir",
+      "stop": "Aturar",
+      "no_activity": "No s'ha pogut crear una invitació per l'activitat."
+    },
+    "queue": {
+      "embed_footer": "Pàgina  %s% de %d% (%f% cançons totals)",
+      "embed_author": "Llista de reproducció",
+      "now_playing": "Ara sonant",
+      "no_previous": "No hi ha cançons anteriors",
+      "no_next": "No hi ha més cançons"
+    },
+    "pause": {
+      "already_paused": "La cançó ja està pausada!",
+      "paused": "La cançó s'ha **pausat**!",
+      "resumed": "La cançó s'ha **reprès**!",
+      "already_resumed": "La cançó no està pausada!"
+    },
+    "artist": {
+      "no_artist": "No he trobat cap artista amb aquest nom!",
+      "no_bio": "No hi ha informació disponible sobre aquest artista",
+      "genres": "Gèneres",
+      "followers": "Seguidors",
+      "popularity": "Popularitat",
+      "open_spotify": "Obrir a Spotify",
+      "play_top_tracks": "Cançons més populars",
+      "embed_title": "Informació de l'artista"
+    },
+    "block": {
+      "no_link": "Has d'especificar un enllaç a bloquejar!",
+      "invalid_link": "L'enllaç que has especificat no és vàlid!",
+      "already_blocked": "L'enllaç que has especificat ja està bloquejat!",
+      "not_blocked": "L'enllaç que has especificat no està bloquejat!",
+      "block": "L'enllaç ha estat **bloquejat**! Tens actualment %s% enllaços bloquejats.\n`Pots veure tots els enllaços bloquejats en https://kenabot.xyz/*blocked/%t%`",
+      "unblock": "L'enllaç ha estat **desbloquejat**! Tens actualment %s% enllaços bloquejats.\n`Pots veure tots els enllaços bloquejats en https://kenabot.xyz/*blocked/%t%`"
+    },
+    "stop": "La llista de reproducció s'ha **buidat**!",
+    "stop_leave": "La llista de reproducció s'ha buidat i he sortit del canal de veu!",
+    "skip": "La cançó ha sigut **saltada**!",
+    "skip_vote": {
+      "no_active_vote": "No hi ha cap votació activa per a saltar la cançó!",
+      "already_active": "Ja hi ha una votació activa per a saltar la cançó!",
+      "vote": "**Comença la votació per saltar la cançó!**\nClica al botó per votar, perquè la cançó sigui saltada ha de tindre per el menys el 50% dels vots dels usuaris.\n'Percentatge actual: %p%'.",
+      "label": "Botar per saltar",
+      "announce": "**He enviat un missatge perquè tots els usuaris del canal de veu votin per saltar la cançó!**\nRecorda fer clic al botó per votar.",
+      "already_voted": "Ja has botat per saltar la cançó!",
+      "cant_vote": "No pots botar per saltar la cançó!",
+      "voted": "Has votat per saltar la cançó!",
+      "canceled": "**Vot per a saltar cancel·lat**\nSembla que no han votat suficients usuaris per a saltar la cançó.",
+      "completed": "**Saltant cançó!**\nEl `%s%` dels usuaris han decidit saltar la cançó.",
+      "redirect": "**Només el DJ pot executar aquesta ordre!**\nSi vols iniciar una votació per a saltar la cançó pots executar l'ordre `/skip`."
+    },
+    "volume": {
+      "info": "\nVolum actual: **%s%**",
+      "invalid_level": "Has d'especificar un nivell de volum entre **0** i **100**!",
+      "set": "El volum s'ha canviat a **%s%**!"
+    },
+    "loop": {
+      "info": "El bucle està **%s%**",
+      "already": "El bucle ja està **%s%**!",
+      "action": "El bucle s'ha **%s%**!",
+      "repeat_track": "activat (cançó)",
+      "repeat_queue": "activat (playlist)",
+      "no_repeat": "Desactivat"
+    },
+    "now_playing": {
+      "remaining": "Restant "
+    },
+    "premium": {
+      "no_code": "No has especificat un codi de premium!",
+      "invalid_code": "El codi que has especificat no és vàlid!",
+      "used_code": "El codi que has especificat ja s'ha fet servir!",
+      "bot_claimed": "Aquest codi ja ha estat usat en aquest bot!",
+      "already_premium": "Ja estàs en el mode donador!",
+      "enabled": "El mode donador ha sigut activat durant **%t%**"
+    },
+    "invite": "Pots convidar-me al teu servidor fent clic en el botó!",
+    "support": "Pots visitar el meu servidor de suport per a obtenir ajuda i més informació fent clic en el botó!",
+    "shuffle": "La llista de reproducció s'ha **barrejat**!",
+    "dashboard": "Pots visitar el meu dashboard web per a configurar-me fent clic en el botó!",
+    "remove": {
+      "invalid": "No hi ha cap cançó en el lloc número **%s%**!",
+      "success": "La cançó `%s%` s'ha **eliminat**!"
+    },
+    "skip_to": "S'han avançat **%s%** cançons!",
+    "clear_queue": "La llista de reproducció s'ha **buidat**!",
+    "seek": {
+      "max_duration": "No puc saltar a una posició superior a la durada de la cançó!",
+      "not_seekable": "Aquesta cançó no pot ser saltada!",
+      "invalid_time": "Has d'especificar una temps vàlid!",
+      "forward_success": "S'ha **avançat** la cançó a `%s%`!",
+      "backward_success": "S'ha **retardat** la cançó a `%s%`!"
+    },
+    "back": {
+      "no_previous": "No hi ha cap cançó anterior!",
+      "success": "S'ha tornat a la cançó anterior!"
+    },
+    "filters": {
+      "no_filters": "Has d'especificar almenys un filtre!",
+      "unknown": "No es reconeix aquest filtre!",
+      "enabled": "El filtre de `%s%` s'ha activat **!",
+      "disabled": "El filtre de `%s%` s'ha desactivat **!",
+      "clear": "Els filtres s'han desactivat **!",
+      "already_enabled": "Aquest filtre ja està activat **!",
+      "already_disabled": "Aquest filtre no està activat **!",
+      "enabled_filters": "Filtres activats: `%s%`"
+    },
+    "_247": {
+      "no_channel": "Has d'especificar un canal de **veu** per a poder activar el mode **24/7**!",
+      "enabled": "El mode **24/7** s'ha **activat** per al canal %s%!",
+      "disabled": "La manera **24/7** s'ha **desactivat**!"
+    },
+    "help": {
+      "desc": "**Hola :wave:**, soc **%s%**!\nSoc el bot de música que el teu servidor necessita! Puc reproduir cançons des de **Spotify**, **Soundcloud**, **Twitch** i [molt més](https://kenabot.xyz)!\n\n**Ordres**\nPots veure informació sobre les meves ordres ** [aquí](https://kenabot.xyz/commands)** o clicant el botó de a baix!\n\n**Prèmium/Donacions**\nLa versió de **[KenaBot per donadors](https://kenabot.xyz/premium)** et donarà accés a noves funcions i millores del bot, com **24/7**, **efectes d'àudio** i un **reproductor web**!!.\n[Clica aquí per més informació](https://kenabot.xyz/premium)\n\n**Afegeix-me al teu servidor**\nPots afegir-me als teus servidors fent clic ** [aquí](https://discord.com/api/oauth2/authorize?client_id=%i%&permissions=3534272&scope=bot%20applications.commands)** o en el botó!\n\n**Servidor de suport**\nEn el meu servidor de suport trobaràs tota mena d'ajuda i més informació sobre mi, pots unir-te fent clic **[aquí(https://kenabot.xyz/support)** o en el botó!",
+      "commands": {
+        "title": "Ordres"
+      },
+      "add": {
+        "title": "Afegeix-me al teu servidor",
+        "add": "Afegeix-me!"
+      },
+      "support": {
+        "title": "Servidor de suport",
+        "support": "Suport"
+      }
+    },
+    "commands": "Pots veure informació sobre totes les meves ordres **[aquí](https://kenabot.xyz/*commands)** o fent clic en el botó de baix!",
+    "lyrics": {
+      "loading": "Estic buscant la cançó...\n`Si no he enviat un missatge amb la lletra, és possible que no hagi trobat la cançó.`",
+      "error": "No s'ha trobat cap cançó amb aquest nom!"
+    },
+    "together": {
+      "embed_title": "Aquí està la teva invitació per a %s%",
+      "embed_description": "Per a accedir a l'activitat pots fer clic [aquí](%s%) o en el botó!",
+      "button": "Anar a l'activitat",
+      "no_permission": "No tinc permisos per a crear invitacions en aquest canal!",
+      "choose_embed_title": "Tria una activitat de Discord Together!",
+      "choose_embed_description": "Fes clic en el menú per a seleccionar l'activitat que desitges!",
+      "choose_embed_placeholder": "Selecciona una activitat"
+    },
+    "session": {
+      "cant_modify_session": "No pots modificar la cua de reproducció mentre estàs en una sessió!",
+      "session_leave": "He abandonat la sessió %s%",
+      "session_end": "La sessió %s% ha acabat!",
+      "already_active": "Ja hi ha una sessió activa en aquest servidor!\nPer si no et recordes, el teu codi de sessió és `%s%`",
+      "cant_create_already_listener": "No pots crear una sessió mentre estàs escoltant una cançó en una altra sessió!\nPer a sortir de la sessió, executa '/session leave'",
+      "cant_create_nothing_playing": "Per a crear una sessió, primer has de reproduir una cançó!",
+      "embed_author": "Sessió de Kena Together",
+      "embed_title": "Has creat una sessió!",
+      "embed_description": "Has creat una sessió de Kena Together! Envia el codi d'invitació als teus amics perquè s'uneixin a la teva sessió!\n```%s%```\nSi ningú s'uneix a la teva sessió en 15 minuts, es tancarà automàticament.",
+      "unknown_code": "No s'ha trobat cap sessió amb aquest codi!",
+      "join_self": "No pots unir-te a la teva pròpia sessió!",
+      "already_in_session": "Ja estàs en una sessió!",
+      "not_hosting": "No estàs allotjant cap sessió!",
+      "cant_join_nothing_playing": "La sessió a la qual intentes unir-te no està reproduint res!",
+      "other_bot": "La sessió a la qual intentes unir-te no està sent reproduïda per aquest bot!\nEstem treballant per a poder unir-te a sessions d'uns altres bots!",
+      "join": "T'has unit a la sessió %s%",
+      "cant_leave_self": "Estàs intentant sortir de la teva pròpia sessió!\nSi vols eliminar-la, usa `/session delete`",
+      "cant_leave_not_in_session": "No estàs en cap sessió!",
+      "leave": "\nHas abandonat la sessió %s%",
+      "delete": "Has eliminat la sessió `%s%` i has expulsat a **%t%** oïdors",
+      "code": "El teu codi de sessió és ```%s%```",
+      "listeners": "Oïdors",
+      "created_at": "Creada"
+    },
+    "status": {
+      "embed_title": "Estat de %s%",
+      "embed_description": "Aquest servidor està en la shard `%s%`\nPer a veure més informació sobre les shards, fes clic [aquí](https://kenabot.xyz/status)"
+    },
+    "config": {
+      "title": "Configuració del servidor",
+      "description": "**Hola** :wave: benvingut a l'assistent de configuració del bot <@!%s%>\n\nSi tens algun dubte a prop del bot i de la seva configuració, pots entrar al meu **[servidor de suport](https://kenabot.xyz/suport)** o consultar la meva **[pàgina web](https://kenabot.xyz)**",
+      "help": "Si necessites ajuda, pots consultar la meva **[pàgina web](https://kenabot.xyz)** o el **[servidor de suport](https://kenabot.xyz/suport)**",
+      "buttons": {
+        "lang": "Idioma",
+        "channels": "Canals bloquejats",
+        "dj": "Rol de DJ",
+        "more": "Mes ",
+        "commands": "Ordres bloquejades",
+        "premium_on": "Mode donador activat",
+        "premium_off": "Mode donador desactivat",
+        "back": "Enrrere",
+        "voice_channels": "Canals de veu bloquejats",
+        "beta_on": "Estàs a la beta",
+        "beta_off": "No estàs a la beta",
+        "silent_on": "Comandaments silenciosos activats",
+        "silent_off": "Comandaments silenciosos desactivats",
+        "explicit_on": "Filtre explícit activat",
+        "explicit_off": "Filtre explícit desactivat",
+        "duration_limit": "Límit de durada",
+        "per_user_songs": "Cançons per usuari",
+        "extra": "Avançat",
+        "embed": "Color del embed",
+        "database": "Informació que guardem",
+        "select_all": "Seleccionar tots ",
+        "remove_all": "Treure tots"
+      },
+      "lang": {
+        "title": "Selecciona l'idioma",
+        "description": "Obre el menú per a triar l'idioma en el qual vols que es mostrin els missatges del bot.\n\nSi no veus el teu idioma pots unir-te al meu [servidor de suport](https://kenabot.xyz/suport) i contribuir com a traductor!",
+        "select": "Selecciona l'idioma"
+      },
+      "channels": {
+        "title": "Canals bloquejats",
+        "description": "Obre el menú per a triar els canals en els quals no respondré missatges.",
+        "select": "Selecciona els canals"
+      },
+      "embed": {
+        "title": "Configuració dels colors dels embeds",
+        "description": "Obre el menú per a triar el color del embed que es mostrarà en tots els missatges del bot.\n\nAquest menú només porta uns colors predeterminats, si vols usar un color personalitzat pots entrar a la meva [dashboard web](https://kenabot.xyz/*dashboard).",
+        "select": "Color del embed"
+      },
+      "premium_on": {
+        "title": "Ja tens el mode de donador activat",
+        "description_forever": "**Moltes gràcies per contribuir al desenvolupament de KenaBot!!!!**\nI tenim bones notícies... El teu mode de donador està activat **permanentment**!",
+        "description": "**Moltes gràcies per contribuir al desenvolupament de KenaBot!!!!**\nSembla que el teu mode de donador acaba <t:%s%:R>, gaudeix de totes les coses que porta aquest mode!"
+      },
+      "premium_off": {
+        "title": "Sembla que no tens el mode donador activat",
+        "description": "Si vols donar al meu desenrotllament, pots fer-ho des de la meva [pàgina web](https://kenabot.xyz/premium)\nRebràs el mode donador i podràs gaudir de totes les coses que té el mode!"
+      },
+      "duration_limit": {
+        "title": "Durada màxima de la cançó",
+        "big_title": "Establir una durada màxima de cançó",
+        "placeholder": "Exemple: 1m30s, 5m, 3m5s... Durada actual: %s%",
+        "no_duration": "No s'ha introduït cap durada",
+        "max_duration": "La durada màxima d'una cançó és de 10 minuts",
+        "success": "Durada màxima establerta correctament a`%s%`"
+      },
+      "database": {
+        "title": "Aquesta és tota la informació que tenim emmagatzemada a cerca del teu servidor:",
+        "raw": "Cru: ",
+        "read": "Llegible:",
+        "delete": "Esborrar informació del servidor",
+        "privacy": "Política de privacitat",
+        "confirm": "Esborrar",
+        "cancel": "Cancel·lar"
+      },
+      "commands": {
+        "title": "Ordres bloquejades",
+        "description": "Obre el menú per escollir les ordres que no respondre.\nSi un usuari sense permís intenta executar una ordre que està bloquejada, li respondré amb un missatge d'error.",
+        "select": "Selecciona les ordres"
+      },
+      "voice": {
+        "title": "Canals de veu bloquejats",
+        "description": "Obre el menú per escollir els canals de veu en els que no em podré unir.",
+        "select": "Selecciona els canals"
+      },
+      "djrole": {
+        "title": "Rol de DJ",
+        "description": "Obre el menú per escollir el rol de DJ, el qual podrà executar tots les ordres de música sense limitacions.",
+        "select": "Selecciona el rol"
+      },
+      "cant_use": "**No pots utilitzar aquesta interacció!**\nPots executar l'ordre pel teu conte per fer-ho servir."
+    }
+  },
+  "manager": {
+    "no_perms": "No tens permisos suficients per executar aquesta acció!",
+    "song_added": "Cançó **[%s%](%l%)** afegida a la cua! '%t%'",
+    "tts_added": "Text a veu afegit a la cua!",
+    "playlist_added": "**%s%** cançons afegides a la cua!",
+    "nothing_playing": "No s'està reproduint res!",
+    "cant_modify_queue": "No pots modificar la cua de reproducció!",
+    "queue_end": "La cua de reproducció s'ha **acabat**!",
+    "explicit_song": "Aquest servidor té bloquejades les cançons explícites, per la qual cosa no es pot reproduir aquesta cançó.",
+    "max_queue_size": "Les playlists sense mode donador desactivat no poden tenir més de **%s%** cançons!",
+    "restart": {
+      "embed_author": "Kenabot es reiniciarà!",
+      "embed_description": "Lamentem aquesta interrupció, però **KenaBot** es reiniciarà per a implementar noves funcions\n**Estarem de tornada en res!**"
+    },
+    "cant_do": "No puc fer això aquí!",
+    "no_premium": "Només els **donadors** poden fer servir aquesta ordre!\n[Fes clic aquí per a saber més](https://kenabot.xyz/*premium)",
+    "no_premium_twitch": "\nNomés els **donadors** poden reproduir directes de **Twitch**!\n[Fes clic aquí per a saber més](https://kenabot.xyz/*premium)",
+    "no_premium_stage": "\nNomés els **donadors** poden reproduir música en **Stage Channels**!\n[Fes clic aquí per a saber més](https://kenabot.xyz/*premium)",
+    "blocked": "**Aquest canal està bloquejat!**\nUn administrador d'aquest servidor ha bloquejat aquest canal per a evitar l'ús d'ordres aquí.",
+    "blocked_command": "**Aquesta ordre està bloquejada!**\nUn administrador d'aquest servidor ha bloquejat aquesta ordre per a evitar el seu ús globalment.",
+    "no_db": "**Sense informació!**\nSembla que no tenim res guardat en les nostres bases de dades sobre el teu servidor.",
+    "delete_confirm": "**Estàs segur que vols esborrar aquesta informació?**\nTota la configuració del servidor es perdrà.",
+    "delete_cancel": "**Cancel·lat!**\nS'ha cancel·lat l'acció d'esborrar la informació.",
+    "deleted": "**Esborrat!**\nS'ha esborrat la informació del servidor.",
+    "dj_role_required": "**Només el DJ pot executar aquesta ordre!**\nSembla que en un canal de veu hi ha un DJ, només ell pot executar aquesta ordre.",
+    "dj_role_required_usecmd": "**Només el DJ pot executar aquesta ordre!**\nSembla que en un canal de veu hi ha un DJ, només ell pot executar aquesta ordre.\n\nPots començar una votació per a saltar la cançó usant l'ordre `/skip`.",
+    "is247": "No pots usar aquesta ordre en el mode **24/7**!",
+    "premium_forever": "Sembla que aquest servidor està en el nostre programa **Partner**, per la qual cosa no pots esborrar la seva configuració.",
+    "blocked_server": "Aquest servidor està bloquejat pel desenvolupador!\nRaó: `%s%`.",
+    "max_duration": "La durada d'aquesta cançó excedeix el màxim d'aquest servidor!",
+    "blocked_song": "Aquesta cançó està bloquejada en aquest servidor!"
+  }
+}

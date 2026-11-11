@@ -1,0 +1,330 @@
+{
+  "flag": "🇬🇧",
+  "name": "English (UK)",
+  "description": "English from the UK",
+  "events": {
+    "guildCreate": {
+      "embed_author": "Thanks for adding me to %s!!",
+      "embed_description": "Thank you for adding me to %s** server! If you need help setting up the bot or if you have any doubts, you can use the buttons below for useful information.\n\nI have detected that your server is on the %s` region, therefore I have automatically enabled the %s language. Don't worry, you can change it whenever you would like using the command `/config`",
+      "buttons": {
+        "web": "My website",
+        "support": "My support server",
+        "add": "Additional bots"
+      }
+    },
+    "dm": {
+      "embed_title": "Hello :wave: I am %s",
+      "embed_description": "I'm the music bot your server needs!\nIf you want a little more **information about me**, you can click the **buttons!**"
+    },
+    "trackStart": {
+      "embed_author": "|  Now playing"
+    },
+    "interactionCreate": {
+      "unknown_command": " I could not find the command you typed",
+      "cant_use_button": " You cannot use this button",
+      "unknown": "Unknown interaction"
+    }
+  },
+  "commands": {
+    "play": {
+      "no_vc": "I cannot play music unless I am on a voice channel!",
+      "vc_required": "You must be on a voice channel to use this command!",
+      "no_vc_perms": "I do not have permissions to play music on this channel!",
+      "different_vc": "I'm already playing music on another channel!",
+      "no_player": "I have no player available!",
+      "no_song": "You must specify a song!",
+      "no_song_found": "I have not found any song with that name!",
+      "youtube_link": "I cannot play songs from YouTube!",
+      "vc_disabled": "An administrator has disabled this voice channel!",
+      "song": "song",
+      "songs": "songs",
+      "duration": "Duration",
+      "in_queue": "In queue",
+      "pause_resume": "Pause/Resume",
+      "stop": "Stop",
+      "no_activity": "I couldn't create a new invite for the activity."
+    },
+    "queue": {
+      "embed_footer": "Page %s of %s (%s total songs)",
+      "embed_author": "Playlist",
+      "now_playing": "Now playing",
+      "no_previous": "There are no previous songs",
+      "no_next": "No more songs"
+    },
+    "pause": {
+      "already_paused": "The song is already paused!",
+      "paused": "The song has **paused**!",
+      "resumed": "The song has **resumed**!",
+      "already_resumed": "The song is not paused!"
+    },
+    "artist": {
+      "no_artist": "I haven't found any artist with that name!",
+      "no_bio": "No information available on this artist",
+      "genres": "Genres",
+      "followers": "Followers",
+      "popularity": "Popularity",
+      "open_spotify": "Open in Spotify",
+      "play_top_tracks": "Play most popular songs",
+      "embed_title": "Artist information"
+    },
+    "block": {
+      "no_link": "You must specify a link to block!",
+      "invalid_link": "The link you have specified is not valid!",
+      "already_blocked": "The link you have specified is already blocked!",
+      "not_blocked": "The link you have specified is not blocked!",
+      "block": "The link has been **blocked**! You currently have %s blocked links.\n\n`You can see all the blocked links at https://kenabot.xyz/blocked/%s`",
+      "unblock": "The link has been **unblocked**! You currently have %s blocked links.\n\n`You can see all the blocked links at https://kenabot.xyz/blocked/%s`"
+    },
+    "stop": "The playlist is now **empty**!",
+    "stop_leave": "The playlist has been **cleared** and I have left the voice channel!",
+    "skip": "The song has been **skipped**!",
+    "skip_vote": {
+      "no_active_vote": "There aren't any active votes to skip the song!",
+      "already_active": "There is already one active vote to skip the song!",
+      "vote": "**Started the vote to skip the song!**\nClick on the button to vote, for the song to be skipped, more than 50% of the users must vote.\n `Current percentage: %s`.",
+      "label": "Vote to skip",
+      "announce": "**I have sent a message for all voice channel users to vote to skip the song!**\nRemember to click the button to vote.",
+      "already_voted": "You have already voted to skip the song!",
+      "cant_vote": "You cannot vote to skip the song!",
+      "voted": "You have voted to skip the song!",
+      "canceled": "**Skip vote cancelled**\nIt looks like not enough users have voted to skip the song.",
+      "completed": "**Skipping the song!**\n`%s` of users have decided to skip the song.",
+      "redirect": "**Only the DJ can execute this command!**\nIf you want to start a vote to skip the song you can execute the `/skip` command."
+    },
+    "volume": {
+      "info": "Current volume: **%s**",
+      "invalid_level": "You must specify a volume level between **0** and **100**!",
+      "set": "The volume has been set to **%s**!"
+    },
+    "loop": {
+      "info": "The loop is **%s**",
+      "already": "The loop is already **%s**!",
+      "action": "The loop has **%s**!",
+      "repeat_track": "enabled (song)",
+      "repeat_queue": "enabled (playlist)",
+      "no_repeat": "deactivated"
+    },
+    "now_playing": {
+      "remaining": "Remaining "
+    },
+    "premium": {
+      "no_code": "You have not entered a premium code!",
+      "invalid_code": "The code you have entered is not valid!",
+      "used_code": "The code you have entered has already been used!",
+      "bot_claimed": "That code has already been used in this bot!",
+      "already_premium": "You are already in donor mode!",
+      "enabled": "Donor mode has been enabled for **%s**"
+    },
+    "invite": "Invite me to your server by clicking the button below!",
+    "support": "Click the button below to join the Support Server to get help and more information!",
+    "shuffle": "The queue has been **shuffled**!",
+    "dashboard": "Visit the Web Dashboard by clicking the button below!",
+    "remove": {
+      "invalid": "There isn't any song in the position **%s**.",
+      "success": "The song `%s` has been **removed**."
+    },
+    "skip_to": "Skipped **%s** songs!",
+    "clear_queue": "Queue **cleared**!",
+    "seek": {
+      "max_duration": "I can't jump to a position longer than the length of the song!",
+      "not_seekable": "You can't skip this song!",
+      "invalid_time": "Please specify a valid time.",
+      "forward_success": "**Skipped** the song to `%s`!",
+      "backward_success": "Song has been **rewound** to `%s`."
+    },
+    "back": {
+      "no_previous": "There aren't any previous songs!",
+      "success": "Rewound a song!"
+    },
+    "filters": {
+      "no_filters": "You must specify at least one filter!",
+      "unknown": "This filter is not recognized!",
+      "enabled": "The %s filter has been **activated**!",
+      "disabled": "The %s filter has been **disabled**!",
+      "clear": "Filters have been **disabled**!",
+      "already_enabled": "This filter is already **activated**!",
+      "already_disabled": "This filter is not **activated**!",
+      "enabled_filters": "Filters activated: `%s`"
+    },
+    "_247": {
+      "no_channel": "You must specify a **voice** channel in order to activate the **24/7** mode!",
+      "enabled": "The **24/7** mode has been **activated** for the %s channel!",
+      "disabled": "The **24/7** mode has been **disabled**!"
+    },
+    "help": {
+      "desc": "**Hello :wave:**, I'm **%s**!\nI'm the music bot your server needs! I can play songs from **Spotify**, **SoundCloud**, **Twitch**, and [much more](https://kenabot.xyz)!\n\n**Commands**\nYou can see the information on all of my commands **[here](https://kenabot.xyz/commands)** or by clicking the button below!\n\n**Premium/Donations**\nThe **[KenaBot for Donors](https://kenabot.xyz/premium)** version will give you access to news features and enhancements, such as **24/7**, **audio effects** and a **web player!!\n[Click here to learn more](https://kenabot.xyz/premium)\n\n**Add me to your server**\nYou can add me to as many servers as you want by clicking **[here](https://discord.com/api/oauth2/authorize?client_id=%s&permissions=3534272&scope=bot%20applications.commands)** or on the button!\n\n**Support Server**\nOn my support server you will find all kinds of help and more information about me, you can join by clicking **[here](https://kenabot.xyz/support)** or on the button!",
+      "commands": {
+        "title": "Commands"
+      },
+      "add": {
+        "title": "Add me to your server",
+        "add": "Add me!"
+      },
+      "support": {
+        "title": "Support server",
+        "support": "Support"
+      }
+    },
+    "commands": "You can see information about all my commands **[here](https://kenabot.xyz/commands)** or by clicking on the button below!",
+    "lyrics": {
+      "loading": "I'm looking for the song...\n`If I haven't sent a message with the lyrics, it's possible that I haven't found the song.`",
+      "error": "I have not found any song with that name!"
+    },
+    "together": {
+      "embed_title": "Here's your invite for %s",
+      "embed_description": "To join the activity, you can click [here](%s) or the button below!",
+      "button": "Go to the activity",
+      "no_permission": "I don't have permissions to create invites in this channel!",
+      "choose_embed_title": "Select an activity!",
+      "choose_embed_description": "Click the menu to select the activity you want!",
+      "choose_embed_placeholder": "Select an activity!"
+    },
+    "session": {
+      "cant_modify_session": "You can't modify the queue while you're in a session.",
+      "session_leave": "You have left the %s session",
+      "session_end": "The session %s has ended!",
+      "already_active": "There is already an active session in this server!\nYour code session is `%s`",
+      "cant_create_already_listener": "You're already in a session!\nPlease leave to create a new one, use `/session leave`",
+      "cant_create_nothing_playing": "To create the session, you first have to play a song!",
+      "embed_author": "Kena Together Session",
+      "embed_title": "Server configuration!",
+      "embed_description": "You have created a session of Kena Together! Send the invitation code to your friends to join your session!\n```%s```\nIf no one joins your session within 15 minutes, your session will be automatically closed.",
+      "unknown_code": "No session found with that code!",
+      "join_self": "You cannot join your own session!",
+      "already_in_session": "You are already in a session!",
+      "not_hosting": "You are not hosting any sessions!",
+      "cant_join_nothing_playing": "The session you are trying to join is not playing anything!",
+      "other_bot": "The session you are trying to join is not being played by this bot!\nWe are still working on being able to join other bots' sessions!",
+      "join": "You have joined session %s",
+      "cant_leave_self": "You are trying to exit your own session!\nIf you want to delete it, use `/session delete`",
+      "cant_leave_not_in_session": "You are not in any session!",
+      "leave": "You have let the session %s",
+      "delete": "You have deleted the session `%s` and kicked **%s** listeners",
+      "code": "Your session code is ```%s```",
+      "listeners": "Listeners",
+      "created_at": "Created"
+    },
+    "status": {
+      "embed_title": "Status of %s",
+      "embed_description": "This server is on the shard `%s`\nTo see more information about shards, click [here](https://kenabot.xyz/status)"
+    },
+    "config": {
+      "title": "Server settings",
+      "description": "**Hello** :wave: welcome to the bot configuration assistant <@!%s>\n\nIf you have any questions about the bot and its configuration, you can go to my **[support server](https://kenabot.xyz/soporte)** or check my **[web page](https://kenabot.xyz)**",
+      "help": "If you need help, you can consult my **[web page](https://kenabot.xyz)** or the **[support server](https://kenabot.xyz/soporte)**",
+      "buttons": {
+        "lang": "Language",
+        "channels": "Blocked channels",
+        "dj": "DJ Role",
+        "more": "More",
+        "commands": "Blocked commands",
+        "premium_on": "Donor mode enabled",
+        "premium_off": "Donor mode deactivated",
+        "back": "Back",
+        "voice_channels": "Blocked voice channels",
+        "beta_on": "You are in the beta programme",
+        "beta_off": "You are not in beta",
+        "silent_on": "Silent commands enabled",
+        "silent_off": "Silent commands disabled",
+        "explicit_on": "Explicit filter on",
+        "explicit_off": "Explicit filter off",
+        "duration_limit": "Duration limit",
+        "per_user_songs": "Songs per user",
+        "extra": "Advanced",
+        "embed": "Embed colour",
+        "database": "Information we store",
+        "select_all": "Select all",
+        "remove_all": "Remove all"
+      },
+      "lang": {
+        "title": "Language Selection",
+        "description": "Open the menu to choose the language in which you want the bot messages to be displayed.\n\nIf you don't see your language you can join my [support server](https://kenabot.xyz/soporte) and contribute as a translator!",
+        "select": "Select language"
+      },
+      "channels": {
+        "title": "Blocked channels",
+        "description": "Open the menu to choose the channels in which I will not reply to messages.",
+        "select": "Select the channels"
+      },
+      "embed": {
+        "title": "Embed colour configuration",
+        "description": "Open the menu to choose the embed colour that will be shown in all the bot's messages.\n\nThis menu has only default colours, if you want to use a custom colour you can go to my [dashboard web](https://kenabot.xyz/dashboard).",
+        "select": "Embed colour"
+      },
+      "premium_on": {
+        "title": "You already have the donor mode enabled",
+        "description_forever": "**Thank you very much for contributing to the development of KenaBot!!!!**\nAnd we have good news, Your donor mode is **permanently** enabled**!",
+        "description": "**Thank you very much for contributing to the development of KenaBot!!!!**\nLooks like you have <t:%s:R> left of donor mode, enjoy all the perks this mode brings!"
+      },
+      "premium_off": {
+        "title": "It seems like you do not have the donor mode enabled",
+        "description": "If you want to donate to my development, you can do it from my [web page](https://kenabot.xyz/premium)\nYou will receive the donor mode and you will be able to enjoy all the things this mode has to offer!"
+      },
+      "duration_limit": {
+        "title": "Maximum song length",
+        "big_title": "Set a maximum song length",
+        "placeholder": "Example: 1m30s, 5m, 3m5s... Current Duration: %s",
+        "no_duration": "No duration entered",
+        "max_duration": "The maximum duration of a song is 10 minutes",
+        "success": "Successfully set maximum duration to `%s`"
+      },
+      "database": {
+        "title": "This is all the information we have stored about your server:",
+        "raw": "Raw:",
+        "read": "Readable:",
+        "delete": "Delete server data",
+        "privacy": "Privacy policy",
+        "confirm": "Clear",
+        "cancel": "Cancel"
+      },
+      "commands": {
+        "title": "Blocked commands",
+        "description": "Open the menu to choose the commands that will not reply to.\nIf a user without permissions tries to execute a blocked command, I will reply with an error message.",
+        "select": "Select the commands"
+      },
+      "voice": {
+        "title": "Blocked Voice Channels",
+        "description": "Open the menu to choose the voice channels I will not be able to join.",
+        "select": "Select the channels"
+      },
+      "djrole": {
+        "title": "DJ Role",
+        "description": "Open the menu to choose the role of the DJ, who will be able to execute all music commands without limitations.",
+        "select": "Select role"
+      },
+      "cant_use": "**You cannot use this interaction!**\nYou can run the command to use it."
+    }
+  },
+  "manager": {
+    "no_perms": "You do not have enough permissions to perform this action!",
+    "song_added": "Song **[%s](%s)** added to the queue! `%s`",
+    "tts_added": "Text to speech added to the queue!",
+    "playlist_added": "**%s** songs added to the queue!",
+    "nothing_playing": "Nothing is being played!",
+    "cant_modify_queue": "You cannot modify the playback queue!",
+    "queue_end": "The playback queue has **finished**!",
+    "explicit_song": "This server has blocked explicit songs, so this song cannot be played.",
+    "max_queue_size": "Playlists without donor mode disabled cannot have more than **%s** songs!",
+    "restart": {
+      "embed_author": "¡KenaBot is restarting!",
+      "embed_description": "We are sorry for this interruption, but **KenaBot** will be rebooting to implement new features.\n**We'll be back in no time!**"
+    },
+    "cant_do": "I can't do that here!",
+    "no_premium": "Only **donors** can use this command!\n[Click here to learn more](https://kenabot.xyz/premium)",
+    "no_premium_twitch": "Only **donors** can play **Twitch** streams!\n[Click here to learn more](https://kenabot.xyz/premium)",
+    "no_premium_stage": "Only **donors** can play music in **Stage Channels**!\n[Click here to learn more](https://kenabot.xyz/premium)",
+    "blocked": "**This channel is blocked!**\nAn administrator has blocked this channel. ",
+    "blocked_command": "**This command is blocked!**\nAn administrator has blocked this command.",
+    "no_db": "**No information!**\nWe don't seem to have anything stored in our databases about your server.",
+    "delete_confirm": "**Are you sure you want to delete this information?**\nAll server configuration will be lost.",
+    "delete_cancel": "**Cancelled!**\nYou have prevented deleting the information.",
+    "deleted": "**Deleted!**\nThe server information has been deleted.",
+    "dj_role_required": "**Only the DJ can execute this command!**\nPlease ask the DJ to execute this command.",
+    "dj_role_required_usecmd": "**Only the DJ can execute this command!**\nPlease ask the DJ to execute this command.",
+    "is247": "You can't use that command with the **24/7** mode enabled!",
+    "premium_forever": "This server is in our **Partner** program, therefore, you can't delete its settings.",
+    "blocked_server": "This server is blocked by the developer!\nReason: `%s`.",
+    "max_duration": "The duration of that song exceeds the maximum in this server!",
+    "blocked_song": "That song is blocked in this server!"
+  }
+}

@@ -1,0 +1,33 @@
+name: Docker Image Build
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "src/**/*"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "src/**/*"
+
+jobs:
+
+  build:
+
+    name: "Docker Image Build (KenaBot) and push to kubernetes"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set-up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '18'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Permisos para Gradle
+        run: chmod +x gradlew
+      - name: Build
+        run: ./gradlew build
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag kena:$(date +%s)

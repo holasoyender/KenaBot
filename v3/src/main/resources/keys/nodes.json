@@ -1,0 +1,59 @@
+{
+  "nodes_backup": [
+    {
+      "host": "ws://***.**.**.***:5053",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "us-east-1",
+      "name": "us-east-1-backup"
+    },
+    {
+      "host": "ws://***.**.**.***:5054",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "us-east-1",
+      "name": "us-east-2-backup"
+    },
+
+
+    {
+      "host": "ws://***.**.**.***:21754",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "eu-west-1",
+      "name": "eu-west-1-aws"
+    }
+
+  ],
+  "nodes": [
+    {
+      "host": "ws://***.**.**.***:21654",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "eu-central-1",
+      "name": "eu-central-1-aws"
+    },
+    {
+      "host": "ws://***.**.**.***:21454",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "eu-central-2",
+      "name": "eu-central-2-aws"
+    },
+    {
+      "host": "ws://***.**.**.***:5053",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "eu-east-1",
+      "name": "local-1-aws"
+    },
+    {
+      "host": "ws://***.**.**.***:5050",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "eu-east-1",
+      "name": "local-2-aws"
+    }
+  ],
+  "nodes_local": [
+    {
+      "host": "ws://localhost:3001",
+      "password": "24a01506363340de8149a40a561342b2",
+      "region": "local",
+      "name": "local"
+    }
+  ]
+}

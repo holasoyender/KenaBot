@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  kenabot:
+    image: kenabot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+  player:
+    image: player
+    build:
+      context: ./player
+      dockerfile: ./player/Dockerfile

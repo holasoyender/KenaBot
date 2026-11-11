@@ -1,0 +1,60 @@
+[package]
+name = "kena"
+version = "4.0.0-alpha1"
+edition = "2021"
+authors = ["holasoyender", "MicroondasV2"]
+keywords = ["discord", "kena", "bot", "music", "spotifyy"]
+readme = "README.MD"
+description = "El bot de música que necesitas para tu servidor de Discord!"
+repository = "https://github.com/holasoyender/Kena"
+license = "Apache-2.0"
+
+[workspace]
+members = [".", "shared"]
+
+[profile.release]
+debug = false
+opt-level = 3
+debug-assertions = false
+overflow-checks = false
+lto = true
+panic = 'unwind'
+incremental = false
+codegen-units = 16
+rpath = false
+
+[dependencies]
+shared = { path = "./shared" }
+skua = {  version = "0.12.1", features = ["collector", "voice", "model"] }
+skua-voice = { version = "0.4.0", features = ["builtin-queue"] }
+tokio = { version = "1.35.0", features = ["macros", "rt-multi-thread", "time", "signal"] }
+log = { version = "0.4.20" }
+fern = { version = "0.6.2", features = ["colored"] }
+chrono = { version = "0.4.31", features = ["serde"] }
+async-trait = {  version = "0.1.74" }
+sentry = { version = "0.32.0" }
+mongodb = { version = "2.7.1", features = ["tokio-runtime"]}
+redis = { version = "0.25.0", features = ["tokio-comp", "ahash", "connection-manager", "keep-alive"] }
+parking_lot = { version = "0.12.1" }
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = { version = "1.0.108"}
+thiserror = { version = "1.0.51" }
+reqwest = { version = "0.11.23" }
+base64 = {  version = "0.22.0" }
+const_format = { version = "0.2.32" }
+rand = { version = "0.8.5" }
+sha2 = { version = "0.10.8" }
+regex = { version = "1.10.2" }
+rocket = { version = "0.5.0", features = ["json", "uuid"]}
+rocket_cors = { version = "0.6.0" }
+prometheus = { version = "0.13.3" }
+arc-swap = {  version = "1.6.0" }
+http = { version = "1.0.0" }
+async-tungstenite = { version = "0.25.0", features = ["tokio", "tokio-runtime"] }
+futures = { version = "0.3.30" }
+url = {  version = "2.5.0" }
+oneshot = { version = "0.1.6" }
+serde_qs = { version = "0.12.0" }
+dashmap = { version = "5.5.3" }
+typemap_rev = { version = "0.3.0" }
+lazy_static = { version = "1.4.0" }
